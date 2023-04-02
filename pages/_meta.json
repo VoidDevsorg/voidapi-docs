@@ -1,0 +1,32 @@
+{
+    "index": "Introduction",
+    "changelog": "Changelog",
+
+
+    "-- APIs": {
+        "type": "separator",
+        "title": "APIs"
+    },
+    "social-media": {
+        "title": "Social Media"
+    },
+    "web": {
+        "title": "Web Search"
+    },
+    "image": {
+        "title": "Image"
+    },
+    "games": {
+        "title": "Games"
+    },
+    "discord": {
+        "title": "Discord"
+    },
+
+    "contact": {
+        "title": "Main Page ↗",
+        "type": "page",
+        "href": "https://voiddevs.org",
+        "newWindow": true
+    }
+}

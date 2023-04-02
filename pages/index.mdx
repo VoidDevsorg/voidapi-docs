@@ -1,0 +1,42 @@
+# Introduction
+
+**VoidAPI** is a simple API agent that lets you get APIs.
+
+<br />
+## API Reference
+
+### Base URL
+
+```
+https://voidapi.rest
+```
+
+### API Versioning
+
+The API is currently in version 1.0.0. The version is included in the URL.
+
+```
+https://voidapi.rest/v1/apis/:provider
+```
+
+|Version|Status|Default|
+|---|---|---|
+| 0 | Discontinued | ❌ |
+| 1 | Available | ✅ |
+
+### Authorization
+
+The API does require authorization.<br />
+Authentication is performed via a token. You can get your token by creating an account on [Void Development](https://voiddevs.org).
+
+**Example**
+
+```js filename="request.js" {copy} {2}
+const axios = require('axios');
+
+axios.get('https://voidapi.rest/v1/apis/discord/user/714451348212678658', {
+    headers: {
+        'Authorization': '320666fa35fef94...'
+    }
+})
+```

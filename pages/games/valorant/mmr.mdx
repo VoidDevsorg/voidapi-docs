@@ -1,0 +1,46 @@
+# Get MMR
+
+<br />
+## API Reference
+
+### Base URL
+
+```http
+https://voidapi.rest/v1/apis/games/valorant/:username/:tag
+```
+
+### Params
+
+| Name | Type | Description | Values |
+| :--- | :--- | :--- | :--- |
+| `username` | `string` | The username of the player. |  |
+| `tag` | `string` | The tag of the player. |  |
+
+### Headers
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| Authorization | `string` | The API key. |
+
+### Fetch
+import { Tab, Tabs } from 'nextra-theme-docs'
+
+<Tabs items={['cURL', 'JavaScript']} defaultIndex="0">
+  <Tab title="cURL">
+    ```bash
+    curl -X GET 'https://voidapi.rest/v1/apis/games/valorant/clqu/VOID' \
+        -H 'Authorization: <insert authorization token here>'
+    ```
+    </Tab>
+    <Tab title="JavaScript">
+        ```js
+        const axios = require('axios');
+        const response = await axios.get('https://voidapi.rest/v1/apis/games/valorant/clqu/VOID', {
+            headers: {
+                'Authorization': '<insert authorization token here>'
+            }
+        });
+
+        console.log(response.data);
+        ```
+    </Tab>
+</Tabs>

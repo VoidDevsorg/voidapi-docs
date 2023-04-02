@@ -1,0 +1,48 @@
+# WWW Search
+
+<br />
+## API Reference
+
+### Base URL
+
+```http
+https://voidapi.rest/v1/apis/web/engines/search
+```
+
+### Queries
+
+| Name | Type | Description | Values |
+| :--- | :--- | :--- | :--- |
+| `q` | `string` | The query to search for. | any |
+| `offset` | `number` | The offset to start at. | any |
+| `safe` | `string` | The safe search level. | `off`, `moderate`, `strict` |
+| `mkt` | `string` | The language to search in. | any like `en-US` |
+
+### Headers
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| Authorization | `string` | The API key. |
+
+### Fetch
+import { Tab, Tabs } from 'nextra-theme-docs'
+
+<Tabs items={['cURL', 'JavaScript']} defaultIndex="0">
+  <Tab title="cURL">
+    ```bash
+    curl -X GET 'https://voidapi.rest/v1/apis/web/engines/search?q=Void Development' \
+        -H "Authorization: <insert authorization token here>"
+    ```
+    </Tab>
+    <Tab title="JavaScript">
+        ```js
+        const axios = require('axios');
+        const response = await axios.get('https://voidapi.rest/v1/apis/web/engines/search?q=Void Development', {
+            headers: {
+                'Authorization': '<insert authorization token here>'
+            }
+        });
+
+        console.log(response.data);
+        ```
+    </Tab>
+</Tabs>
